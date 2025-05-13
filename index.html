@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKC Inventory</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #e0e0e0;
+      font-family: 'Calibri', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .logo {
+      display: flex;
+      margin-bottom: 2rem;
+    }
+    .logo-box {
+      width: 80px;
+      height: 80px;
+      background: #e0e0e0;
+      margin: 0 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: bold;
+      color: #0051ba;
+      border-radius: 16px;
+      box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+    }
+    .welcome {
+      font-size: 24px;
+      color: #00387c;
+      margin-bottom: 2rem;
+    }
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 480px;
+      margin-bottom: 3rem;
+    }
+    .menu button {
+      width: 100%;
+      padding: 2rem 1rem;
+      background: #e0e0e0;
+      border: none;
+      border-radius: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+      box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+      cursor: pointer;
+    }
+    .menu button:hover {
+      box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
+    }
+    .footer {
+      font-size: 14px;
+      color: #999;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <div class="logo-box">S</div>
+    <div class="logo-box">K</div>
+    <div class="logo-box">C</div>
+  </div>
+
+  <div class="welcome">Hello Parviz</div>
+
+  <div class="menu">
+    <button onclick="location.href='category.html'">New purchase</button>
+    <button onclick="location.href='main-list.html'">Main list</button>
+    <button onclick="location.href='pedram-parsa.html'">Pedram / Parsa</button>
+    <button onclick="exportToExcel()">Export to Excel</button>
+  </div>
+
+  <div class="footer">Powered by Pedram Shiva</div>
+
+  <!-- SheetJS -->
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+  <script>
+    function exportToExcel() {
+      fetch('SKC_data.json')
+        .then(res => res.json())
+        .then(data => {
+          const worksheet = XLSX.utils.json_to_sheet(data);
+          const workbook = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(workbook, worksheet, "Products");
+          XLSX.writeFile(workbook, "SKC_Export.xlsx");
+        });
+    }
+  </script>
+</body>
+</html>
