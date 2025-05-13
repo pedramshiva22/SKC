@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Purchase Form - SKC</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <div class="logo">
+    <div class="logo-box">S</div>
+    <div class="logo-box">K</div>
+    <div class="logo-box">C</div>
+  </div>
+
+  <div class="heading">Enter Product Details</div>
+
+  <form class="product-form">
+    <label for="supplier">Supplier</label>
+    <select id="supplier" name="supplier">
+      <option value="">Select supplier</option>
+      <option value="S01">S01</option>
+      <option value="S02">S02</option>
+      <option value="S03">S03</option>
+    </select>
+
+    <label for="quantity">Quantity (pcs)</label>
+    <input type="number" id="quantity" name="quantity" min="0" max="200" step="1" />
+
+    <label for="brand">Brand</label>
+    <select id="brand" name="brand">
+      <option value="">Select brand</option>
+      <option value="SEW">SEW</option>
+      <option value="SIEMENS">SIEMENS</option>
+      <option value="WEG">WEG</option>
+    </select>
+
+    <label for="details">Additional Details</label>
+    <textarea id="details" name="details" rows="3" placeholder="Write additional info here..."></textarea>
+
+    <label for="image">Add Image</label>
+    <input type="file" id="image" name="image" accept="image/*" />
+
+    <div class="toggle-wrapper">
+      <label class="switch-label" for="ex">Ex</label>
+      <label class="switch">
+        <input type="checkbox" id="ex" name="ex">
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <button type="submit" class="save-button">Save</button>
+  </form>
+</body>
+</html>
