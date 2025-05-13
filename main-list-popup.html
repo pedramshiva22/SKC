@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main List with Image Popup - SKC</title>
+  <link rel="stylesheet" href="popup-list.css" />
+</head>
+<body>
+  <div class="list-container">
+    <h2>Main Product List</h2>
+    <ul class="product-list">
+      <li onclick="showPopup('example-image.jpg')">
+        <span class="code">#491</span>
+        <span class="details">SEW geared motor FA87 - 23rpm - 18kw - 60Hz - new - Pedram - 2pcs - 79kg - 8 AED/kg - 632 AED - 12 May</span>
+        <span class="coding">140400491</span>
+      </li>
+    </ul>
+    <div class="back-btn-container">
+      <button onclick="location.href='index.html'" class="back-button">Back</button>
+    </div>
+  </div>
+
+  <!-- Popup Image -->
+  <div id="popup" class="popup-overlay" onclick="hidePopup()">
+    <img id="popup-image" src="" alt="Product Image" />
+  </div>
+
+  <script>
+    function showPopup(imageName) {
+      const popup = document.getElementById('popup');
+      const img = document.getElementById('popup-image');
+      img.src = imageName;
+      popup.style.display = 'flex';
+    }
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
