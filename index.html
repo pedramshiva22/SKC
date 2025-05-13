@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1284, height=2778, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKC Inventory</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,14 +17,12 @@
   <div class="welcome">Hello Parviz</div>
 
   <div class="menu">
-    <button onclick="location.href='new-purchase.html'">New purchase</button>
+    <button onclick="location.href='category.html'">New purchase</button>
     <button onclick="location.href='main-list.html'">Main list</button>
     <button onclick="location.href='pedram-parsa.html'">Pedram / Parsa</button>
-    <button onclick="exportExcel()">Export to Excel</button>
+    <a href="SKC_export_ready.xlsx" download class="excel-button">Export to Excel</a>
   </div>
 
   <div class="footer">Powered by Pedram Shiva</div>
-
-  <script src="main.js"></script>
 </body>
 </html>
