@@ -1,0 +1,67 @@
+
+body {
+  font-family: 'Calibri', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 2rem;
+  color: #222;
+}
+
+h2 {
+  text-align: center;
+  color: #00387c;
+  margin-bottom: 2rem;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-list li {
+  background: #ffffff;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.code {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details {
+  color: #222;
+  font-size: 16px;
+}
+
+.details span.value-blue {
+  color: #0051ba;
+}
+
+.coding {
+  color: green;
+  font-size: 14px;
+}
+
+.back-btn-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.back-button {
+  background-color: #a8e6a1;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+}
