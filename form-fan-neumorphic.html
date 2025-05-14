@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fan Entry - SKC</title>
+  <style>
+    body {
+      background: #e0e0e0;
+      font-family: 'Calibri', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    .logo {
+      display: flex;
+      margin-bottom: 1rem;
+    }
+    .logo-box {
+      width: 60px;
+      height: 60px;
+      margin: 0 4px;
+      background: #0051ba;
+      color: white;
+      font-weight: bold;
+      font-size: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      box-shadow: 6px 6px 12px #bebebe, -4px -4px 8px #ffffff;
+    }
+    .code {
+      color: #0B8713;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 2rem;
+    }
+    .form-container {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    label {
+      font-weight: bold;
+      font-size: 16px;
+      color: #555;
+    }
+    input[type="number"], input[type="text"], textarea {
+      width: 180px;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      background: #e0e0e0;
+      box-shadow: inset 4px 4px 8px #bebebe, inset -4px -4px 8px #ffffff;
+    }
+    textarea {
+      width: 100%;
+      resize: vertical;
+    }
+    .toggle-switch {
+      position: relative;
+      width: 50px;
+      height: 26px;
+    }
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      border-radius: 26px;
+      transition: 0.4s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 20px;
+      width: 20px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+    .toggle-switch input:checked + .slider {
+      background-color: #0B8713;
+    }
+    .toggle-switch input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+    button {
+      background-color: #88d08a;
+      border: none;
+      padding: 1rem;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 16px;
+      margin-top: 2rem;
+      cursor: pointer;
+      box-shadow: 4px 4px 8px #bebebe, -4px -4px 8px #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <div class="logo-box">S</div>
+    <div class="logo-box">K</div>
+    <div class="logo-box">C</div>
+  </div>
+  <div class="code">#491</div>
+
+  <div class="form-container">
+    <div class="row">
+      <label>KW</label>
+      <input type="number" placeholder="0.0" step="0.1">
+    </div>
+    <div class="row">
+      <label>TYPE</label>
+      <input type="text" placeholder="e.g. Jet">
+    </div>
+    <div class="row">
+      <label>RPM</label>
+      <input type="number" placeholder="0" step="1">
+    </div>
+    <div class="row">
+      <label>Flow Rate</label>
+      <input type="number" placeholder="0" step="1">
+    </div>
+    <div class="row">
+      <label>Diameter</label>
+      <input type="number" placeholder="0" step="1">
+    </div>
+    <div class="row">
+      <label>Ex</label>
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="row">
+      <label>Hertz</label>
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="row">
+      <label>New</label>
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div>
+      <label>Additional Details</label>
+      <textarea rows="3" placeholder="Write details here..."></textarea>
+    </div>
+    <button>Save</button>
+    <button onclick="location.href='category.html'">Back</button>
+  </div>
+</body>
+</html>
